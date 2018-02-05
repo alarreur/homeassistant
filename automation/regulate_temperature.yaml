@@ -28,3 +28,35 @@
         {% else %}
           Eteind
         {% endif %}
+
+# Set thermostat at 18 degrees when leaving home
+- alias: Régler thermostat sur 18 degrés quand absent
+  trigger:
+    - platform: state
+      entity_id: group.all_devices
+      to: 'not_home'
+  condition:
+    condition: state
+    entity_id: input_boolean.activate_thermostat_tv_room
+    state: 'on'
+  action:
+    service: input_number.set_value
+    data:
+      entity_id: input_number.thermostat_tv_room
+      value: 18
+
+# Set thermostat at 20 degrees when getting home
+- alias: Régler thermostat sur 20 degrés quand à la maison
+  trigger:
+    - platform: state
+      entity_id: group.all_devices
+      to: 'home'
+  condition:
+    condition: state
+    entity_id: input_boolean.activate_thermostat_tv_room
+    state: 'on'
+  action:
+    service: input_number.set_value
+    data:
+      entity_id: input_number.thermostat_tv_room
+      value: 20
