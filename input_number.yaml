@@ -1,0 +1,34 @@
+###########################################################
+# Thermostats
+###########################################################
+
+thermostat_living_room:
+  name: "Thermostat Salon"
+  initial: 19
+  min: 16
+  max: 25
+  step: 1
+  mode: box
+  icon: mdi:nest-thermostat
+
+thermostat_tv_room:
+  name: "Thermostat Pièce TV"
+  initial: 19
+  min: 16
+  max: 25
+  step: 1
+  mode: box
+  icon: mdi:nest-thermostat
+
+###########################################################
+# Lights
+###########################################################
+
+dimmer_light_living_room:
+  name: "Variateur lumière salon"
+  initial: 0
+  min: 0
+  max: 5
+  step: 1
+  mode: slider
+  icon: mdi:lightbulb

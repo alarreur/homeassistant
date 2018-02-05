@@ -1,0 +1,30 @@
+###########################################################
+# TV ROOM
+###########################################################
+
+# Regulates the TV room temperature
+- alias: Réguler température Pièce TV
+  trigger:
+    - platform: state
+      entity_id: sensor.aeotec_zw100_multisensor_6_temperature
+    - platform: state
+      entity_id: input_number.thermostat_tv_room
+    - platform: state
+      entity_id: input_boolean.activate_thermostat_tv_room
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: input_boolean.activate_thermostat_tv_room
+        state: 'on'
+  action:
+    service: input_select.select_option
+    data_template:
+      entity_id: input_select.heating_mode_tv_room
+      option: >
+        {% if states('sensor.aeotec_zw100_multisensor_6_temperature') | float - states('input_number.thermostat_tv_room') | float < 0 %}
+          Confort
+        {% else %}
+          Eteind
+        {% endif %}

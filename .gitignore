@@ -1,0 +1,13 @@
+.HA_VERSION
+.uuid
+*.db
+*.log
+*.xml
+*.txt
+*.sqlite
+*.conf
+*.backup
+deps
+www
+secrets.yaml
+known_devices.yaml

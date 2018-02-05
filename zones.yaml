@@ -1,0 +1,17 @@
+- name: Home
+  latitude: !secret latitude_home
+  longitude: !secret longitude_home
+  radius: 30
+  icon: mdi:home
+
+- name: Work Amaury
+  latitude: !secret latitude_work_amaury
+  longitude: !secret longitude_work_amaury
+  radius: 30
+  icon: mdi:briefcase
+
+- name: Work Maud
+  latitude: !secret latitude_work_maud
+  longitude: !secret longitude_work_maud
+  radius: 30
+  icon: mdi:briefcase

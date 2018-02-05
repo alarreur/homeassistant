@@ -1,0 +1,26 @@
+###########################################################
+# TV ROOM
+###########################################################
+
+# Maps the select_input to the proper 'fil pilote' mode
+- alias: Mapping chauffage pièce TV
+  trigger:
+    platform: state
+    entity_id: input_select.heating_mode_tv_room
+  action:
+    # Set heater dimmer
+    - service: light.turn_on
+      entity_id: light.qubino_dimmer_heater_tv_level
+      data_template:
+        brightness: >
+          {% if is_state(trigger.entity_id, 'Eteind') %}
+            0
+          {% elif is_state(trigger.entity_id, 'Hors gel') %}
+            45
+          {% elif is_state(trigger.entity_id, 'Eco') %}
+            55
+          {% elif is_state(trigger.entity_id, 'Confort') %}
+            85
+          {% else %}
+            0
+          {% endif %}

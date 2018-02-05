@@ -1,0 +1,106 @@
+###########################################################
+# VIEWS
+###########################################################
+
+default_view:
+  view: yes
+  icon: mdi:home 
+  entities:
+    - group.heating_living_room
+    - group.heating_tv_room
+    - group.lights_living_room
+    - group.lights_tv_room
+    - group.view_climate
+    - group.locations
+
+View Living Room:
+  name: Salon
+  view: yes
+  entities: 
+    - group.heating_living_room
+    - group.lights_living_room
+
+View Piece TV:
+  name: Pièce TV
+  view: yes
+  entities: 
+    - group.heating_tv_room
+    - group.lights_tv_room
+    - media_player.plex_9dnb69y8s1zl4n29uvzlx0kj
+
+View Climate:
+  name: Climat
+  view: yes
+  entities:
+  - group.thermostats
+  - group.heating_modes
+
+###########################################################
+# Heating
+###########################################################
+
+Heating All:
+  name: Tous les chauffages
+  entities:
+    - group.heating_living_room
+    - group.heating_tv_room
+
+Heating Living Room:
+  name: Chauffage Salon
+  entities:
+    - input_number.thermostat_living_room
+    - input_select.heating_mode_living_room
+
+Heating TV Room:
+  name: Chauffage Pièce TV
+  entities:
+    - input_boolean.activate_thermostat_tv_room
+    - input_number.thermostat_tv_room
+    - input_select.heating_mode_tv_room
+
+###########################################################
+# Lights
+###########################################################
+
+Lights All:
+  name: Toutes les Lumières
+  entities:
+    - group.lights_living_room
+    - group.lights_tv_room
+
+Lights Living Room:
+  name: Lumières Salon
+  entities:
+    - input_boolean.light_living_room_tripod
+    - input_boolean.light_living_room_entry
+    - input_number.dimmer_light_living_room
+
+Lights TV Room:
+  name: Lumières TV
+  entities:
+    - input_boolean.light_tv_room_celing
+
+###########################################################
+# Climate
+###########################################################
+
+Thermostats:
+  name: Thermostats
+  entities:
+    - input_number.thermostat_living_room
+    - input_number.thermostat_tv_room
+
+Heating modes:
+  name: Mode des chauffage
+  entities:
+    - input_select.heating_mode_living_room
+    - input_select.heating_mode_tv_room
+
+###########################################################
+# Location
+###########################################################
+
+Locations:
+  name: Localisation
+  entities:
+    - device_tracker.amaury_oneplusx

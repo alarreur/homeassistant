@@ -1,0 +1,27 @@
+###########################################################
+# Lights
+###########################################################
+
+light_living_room_tripod:
+  name: Lumière Salon Trépied
+  initial: off
+  icon: mdi:lightbulb
+
+light_living_room_entry:
+  name: Lumière Salon Entrée
+  initial: off
+  icon: mdi:lightbulb
+
+light_tv_room_celing:
+  name: Lumière Plafond TV
+  initial: off
+  icon: mdi:lightbulb
+
+###########################################################
+# Thermostat activations
+###########################################################
+
+activate_thermostat_tv_room:
+  name: Activer thermostat Pièce TV
+  initial: off
+  icon: mdi:flash-auto

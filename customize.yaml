@@ -1,0 +1,37 @@
+sensor.aeotec_zw100_multisensor_6_temperature:
+  friendly_name: Température Pièce TV
+zwave.qubino_zmnhjd1_flush_dimmer_pilot_wire:
+  hidden: true
+binary_sensor.qubino_zmnhjd1_flush_dimmer_pilot_wire_sensor_3:
+  hidden: true
+binary_sensor.qubino_zmnhjd1_flush_dimmer_pilot_wire_sensor:
+  hidden: true
+binary_sensor.qubino_zmnhjd1_flush_dimmer_pilot_wire_sensor_2:
+  hidden: true
+switch.qubino_zmnhjd1_flush_dimmer_pilot_wire_switch:
+  hidden: true
+sensor.qubino_zmnhjd1_flush_dimmer_pilot_wire_temperature:
+  hidden: true
+sensor.aeotec_zw100_multisensor_6_ultraviolet:
+  hidden: true
+sensor.aeotec_zw100_multisensor_6_sourcenodeid:
+  hidden: true
+sensor.aeotec_zw100_multisensor_6_alarm_level:
+  hidden: true
+sensor.aeotec_zw100_multisensor_6_alarm_type: {}
+light.qubino_dimmer_heater_tv_level:
+  friendly_name: Commande fil pilote Pièce TV
+sensor.aeotec_zw100_multisensor_6_relative_humidity:
+  friendly_name: Humidité Pièce TV
+zwave.aeotec_zw100_multisensor_6:
+  hidden: true
+sensor.aeotec_zw100_multisensor_6_luminance:
+  friendly_name: Luminosité Pièce TV
+input_number.thermostat_tv_room:
+  unit_of_measurement: °C
+sensor.yweather_temperature:
+  friendly_name: Température extérieure
+sensor.yweather_condition:
+  friendly_name: Météo
+sensor.yweather_humidity:
+  friendly_name: Humidité extérieure

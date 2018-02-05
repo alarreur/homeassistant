@@ -1,0 +1,19 @@
+heating_mode_living_room:
+  name: Mode Chauffage Salon
+  icon: mdi:hot-tub
+  initial: Eteind
+  options:
+    - Eteind
+    - Hors gel
+    - Eco
+    - Confort
+
+heating_mode_tv_room:
+  name: Mode Chauffage Pièce TV
+  icon: mdi:hot-tub
+  initial: Eteind
+  options:
+    - Eteind
+    - Hors gel
+    - Eco
+    - Confort
