@@ -104,3 +104,5 @@ Locations:
   name: Localisation
   entities:
     - device_tracker.amaury_oneplusx
+    - device_tracker.iphone_de_maud
+    - input_boolean.motion_tv_room

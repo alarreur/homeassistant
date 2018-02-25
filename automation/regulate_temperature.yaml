@@ -49,7 +49,10 @@
 - alias: Régler thermostat sur 20 degrés quand à la maison
   trigger:
     - platform: state
-      entity_id: group.all_devices
+      entity_id: device_tracker.amaury_oneplusx
+      to: 'home'
+    - platform: state
+      entity_id: device_tracker.iphone_de_maud
       to: 'home'
   condition:
     condition: state

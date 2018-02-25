@@ -1,0 +1,25 @@
+###########################################################
+# Motion in TV Room
+###########################################################
+
+- alias: Présence pièce TV
+  trigger:
+    platform: state
+    entity_id: sensor.aeotec_zw100_multisensor_6_burglar
+    from: '0'
+    to: '8'
+  action:
+    service: input_boolean.turn_on
+    data:
+      entity_id: input_boolean.motion_tv_room
+
+- alias: Absence pièce TV
+  trigger:
+    platform: state
+    entity_id: sensor.aeotec_zw100_multisensor_6_burglar
+    from: '8'
+    to: '0'
+  action:
+    service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.motion_tv_room

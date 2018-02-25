@@ -25,6 +25,9 @@ config:
 # Enables the MQTT broker
 mqtt:
 
+# Enables iOS
+ios:
+
 # Device tracking
 device_tracker:
  - platform: mqtt_json
@@ -67,6 +70,7 @@ history:
       - sensor.yweather_humidity
       - sensor.yweather_condition
       - device_tracker.amaury_oneplusx
+      - input_boolean.motion_tv_room
 
 history_graph:
   graph_temp_tv_room:
@@ -101,6 +105,12 @@ history_graph:
     name: Localisation
     entities:
       - device_tracker.amaury_oneplusx
+      - device_tracker.iphone_de_maud
+  graph_motion:
+    name: Mouvement
+    entities:
+      - input_boolean.motion_tv_room
+
 # View all events in a logbook
 logbook:
 

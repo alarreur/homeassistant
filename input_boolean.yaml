@@ -25,3 +25,12 @@ activate_thermostat_tv_room:
   name: Activer thermostat Pièce TV
   initial: off
   icon: mdi:flash-auto
+
+###########################################################
+# Test
+###########################################################
+
+motion_tv_room:
+  name: Mouvement pièce TV
+  initial: off
+  icon: mdi:run-fast 
